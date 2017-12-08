@@ -1,0 +1,59 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  
+  <head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-COMPATIBLE' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='description' content=''>
+  <meta name='author' content='mobilnik'>
+  <title>CamShot - signin</title>
+  <!-- Bootstrap -->
+  <link href="{ static 'css/bootstrap.min.css' %}" rel='stylesheet'>
+    <!-- our css's -->
+  <link href="{% static 'css/page.css' %}" rel='stylesheet'>
+    <!-- Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+  
+  <title>JpegCamera Demo</title>
+  <script type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
+  <script type="text/javascript"
+      src="{% static 'jpeg_camera_with_dependencies.min.js' %}"> </script>
+  <script type="text/javascript" 
+      src="{% static 'demo.js'%}">
+  </script>
+  <link href="{% static 'demo.css' %}" media="all" rel="stylesheet" type="text/css" /></link>
+  </head>
+  
+  <body>
+      <div class="footer-logo">
+        <a href="/"><h2>Camshot</h2></a>
+      </div>
+          <h6>Information Security Project by Dianova A., Solovyov A., Ulitin I.</h6>
+      <div id="camera">
+      
+      <div class="placeholder">
+        Your browser does not support camera access.<br>
+        We recommend
+        <a href="https://www.google.com/chrome/" target="_blank">Chrome</a>
+        &mdash; modern, secure, fast browser from Google.<br>
+        It's free.
+      </div>
+    </div><br>
+
+    <button id="take_snapshots">Take more snapshots</button>
+    <button id="show_stream">Show stream</button><br>
+
+    <div id="snapshots"></div>
+
+    <button id="discard_snapshot">Discard snapshot</button>
+
+    <img src="{% static 'loader.gif' %}" id="loader">
+    <div id="upload_status"></div>
+    <div id="upload_result"></div>
+  </body>
+</html>
