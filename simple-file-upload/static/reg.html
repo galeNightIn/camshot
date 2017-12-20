@@ -17,13 +17,13 @@
     <!-- Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
   
-  <title>Camshot - Log in</title>
+  <title>Camshot - Log Reg_in</title>
   <script type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>
   <script type="text/javascript"
       src="{% static 'jpeg_camera_with_dependencies.min.js' %}"> </script>
   <script type="text/javascript" 
-      src="{% static 'demo.js'%}">
+      src="{% static 'demo_reg.js'%}">
   </script>
   <link href="{% static 'demo.css' %}" media="all" rel="stylesheet" type="text/css" /></link>
   </head>
@@ -37,6 +37,8 @@
           <button id="show_stream" class='videoControlButton btn btn-lg btn-primary btn-block'>Show stream</button>
         </td>
         <td width="40%"> 
+          Give us about 20 photos
+          <h3><a href="/train/" class="footer-logo">Train!</a></h3>
           <div id="camera" class="center video-mask"></div>
         </td>
         <td width="30%">
@@ -63,10 +65,14 @@
 
     <div id="snapshots"></div>
 
-    
-
     <img src="{% static 'loader.gif' %}" id="loader">
    
+   <form style = "display: inline-block;" method="POST" action="/loadlogin/">
+              {% csrf_token %}
+              <input style = "display: inline-block;" type="text" name="textfield">
+
+              <button style = "display: inline-block;" type="submit">Upload login</button>    
+          </form>
   </body>
 
   <footer align="right">

@@ -22,8 +22,7 @@ def preprocess():
     reps = []
 
     for di in os.listdir(faces_folder_path):
-        print("faces_folder_path" + faces_folder_path)
-        print("os.path" + os.path)
+    
         for f in glob.glob(os.path.join(faces_folder_path+di, "*")):
             print("Processing file: {}".format(f))
             img = io.imread(f)
@@ -112,9 +111,6 @@ def dist(img):
         print('unknown person')
     return l2
     
-        
-
-
 
 def train():
     preprocess()

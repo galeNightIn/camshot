@@ -128,6 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 MEDIA_URL = '/uploads/test/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads/core/proj1/test/')
+MEDIA_ROOT_TRAIN = os.path.join(BASE_DIR, 'uploads/core/proj1/train/')
 
 ML_ROOT = os.path.join(BASE_DIR, 'uploads/core/proj1/') 
 

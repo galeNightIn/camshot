@@ -1,6 +1,7 @@
 from django import forms
 
-from uploads.core.models import Document
+from .models import Document
+from .models import Login
 
 
 class DocumentForm(forms.ModelForm):
@@ -8,5 +9,8 @@ class DocumentForm(forms.ModelForm):
         model = Document
         fields = ('description', 'document', )
 
-class NameForm(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)
+class LoginForm(forms.ModelForm):
+	class Meta:
+		model = Login 
+		fields = ('login',)
+

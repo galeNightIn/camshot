@@ -8,3 +8,5 @@ class Document(models.Model):
     document = models.FileField(upload_to='documents/')
     uploaded_at = models.DateTimeField(auto_now_add=True)
 
+class Login(models.Model):
+	login = models.CharField(max_length = 16, blank=True)

@@ -1,6 +1,4 @@
 .video-mask{
-text-align: center;
-margin: auto;
 width: 640px;
 -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); 
 -webkit-transform: rotate(0.000001deg); 
@@ -20,7 +18,7 @@ overflow: hidden;
 
 .main-container{
 	width: 80%;
-	position:absolute;
+	position:relative;
 	margin-left:auto;
 	margin-right:auto;
 	padding-right:15px;
@@ -30,7 +28,6 @@ overflow: hidden;
 }
 
 .footer-logo{
-	align-content: right;
 	color: #025AA5;
 	font-family: 'Audiowide';
 }
@@ -40,7 +37,11 @@ overflow: hidden;
 	display: none;
 }
 
-
+.videoControlButton{
+	align-items: center;
+	width: 66%;
+	margin-top: 50px;
+}
 
 .screenshot{
 	display: none;
@@ -68,14 +69,4 @@ footer {
 	padding-right: 10px;
 }
 
-button {
-    background-color: #0000FF; /* Blue */
-    align-self: center;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
+
